@@ -1,5 +1,5 @@
 Data Vista is a full-stack web application designed to streamline Excel-based data analysis using AI-powered insights and interactive visualizations. It features a secure authentication system, role-based dashboards, and a suite of tools for uploading, analyzing, and visualizing Excel files.
-🔧 Tech Stack:
+<\n>🔧 Tech Stack:
 - Frontend: React, Vite, CSS Modules.
 - Backend: Node.js, Express.js, MongoDB.
 - Authentication: JWT-based login and protected routes.
