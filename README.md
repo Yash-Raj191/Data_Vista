@@ -4,6 +4,7 @@ Data Vista is a full-stack web application designed to streamline Excel-based da
 - Backend: Node.js, Express.js, MongoDB.
 - Authentication: JWT-based login and protected routes.
 - Visualization: Custom components for 2D/3D charts and statistical summaries.<br>
+
 ✨ Key Features:<br>
 - User & Admin Dashboards: Tailored interfaces for different roles.
 - Excel Upload & Parsing: Upload .xlsx files for AI-driven analysis.
