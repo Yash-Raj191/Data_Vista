@@ -1,0 +1,63 @@
+.visualization-container {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  color: #232946;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  padding: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controls select,
+.visualization-container select,
+.chart-customization input {
+  border: 1px solid #7fb2e5;
+  color: #232946;
+  background: #fff;
+  border-radius: 8px;
+  min-width: 150px;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.controls select option,
+.visualization-container select option {
+  background: var(--primary-color);
+  color: white;
+}
+
+.chart-customization {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-customization input[type="text"] {
+  width: 200px;
+}
+
+.chart-customization input[type="color"] {
+  padding: 2px;
+  width: 50px;
+  height: 34px;
+}
+
+.chart-container {
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  padding: 2rem; /* Increased padding */
+  min-height: 450px; /* Increased minimum height */
+  height: 500px;     /* Set a larger fixed height */
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+}

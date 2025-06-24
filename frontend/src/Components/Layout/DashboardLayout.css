@@ -1,0 +1,131 @@
+:root {
+  --primary-color: #6C63FF;
+  --accent-color: #00C9A7;
+  --background-color: #F9F9FF;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --sidebar-width: 250px;
+  --border-color: #eee;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: white;
+  padding: 2rem;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.app-title {
+  color: #232946;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.user-name {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: calc(100% - 100px); /* Adjust based on your header height */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: var(--background-color);
+  color: var(--primary-color);
+}
+
+.nav-item.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 2rem;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.logout-btn:hover {
+  background: #ffebee;
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 1rem;
+  }
+
+  .app-title, .user-name, .nav-label {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+
+  .nav-icon {
+    margin-right: 0;
+  }
+
+  .logout-btn .nav-label {
+    display: none;
+  }
+  
+  .logout-btn {
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+  }
+}

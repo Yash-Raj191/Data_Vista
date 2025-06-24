@@ -1,0 +1,94 @@
+.three-d-container {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  color: #232946;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  padding: 1.5rem;
+}
+
+.axis-selectors {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.axis-selectors select {
+  border: 1px solid #7fb2e5;
+  border-radius: 8px;
+  background: #fff;
+  color: #232946;
+  min-width: 150px;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.canvas-container {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.visualization-controls {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.instructions {
+  color: var(--text-secondary);
+}
+
+.instructions h4 {
+  margin-bottom: 0.5rem;
+  color: #232946;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructions li {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.point-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: pre-line;
+  pointer-events: none;
+  transform: translate3d(-50%, -100%, 0);
+  display: none;
+}
+
+.three-d-container:hover .point-tooltip {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .three-d-container {
+    background: #1e1e1e;
+  }
+
+  .axis-selectors select {
+    background: #2d2d2d;
+    border-color: #444;
+    color: white;
+  }
+
+  .canvas-container {
+    border-color: #444;
+  }
+
+  .visualization-controls {
+    background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);;
+  }
+}

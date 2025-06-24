@@ -1,0 +1,248 @@
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.admin-dashboard {
+  /* Styles the main dashboard container (background, padding, font, etc.) */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(120deg, #f0f4f9 60%, #e0e7ff 100%);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  color: #232946;
+}
+
+/* Card styles */
+.stat-card, .metric-card, .chart-stat-card {
+  /* Styles for summary/statistics cards and chart cards (background, border, shadow, etc.) */
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  color: #232946;
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  border: 1px solid #e0e7ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover, .metric-card:hover, .chart-stat-card:hover {
+  /* Hover effect for cards (lift and shadow) */
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.13);
+}
+
+/* Table styles */
+.users-table {
+  /* Styles the user management table (width, border radius, shadow) */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+}
+
+.users-table th,
+th {
+  /* Styles for all table header cells (background gradient, text color, padding) */
+  background: #7fb2e5;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #e0e7ff;
+}
+
+.users-table td {
+  /* Styles the table body cells (background, text color, padding, border) */
+  background: #f9fafb;
+  color: #232946;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e0e7ff;
+}
+
+.users-table tr:last-child td {
+  /* Removes border from last row */
+  border-bottom: none;
+}
+
+/* Status indicators */
+.status.active {
+  /* Styles for user status indicators (active/inactive badges) */
+  background: #43aa8b;
+  color: #fff;
+  padding: 0.3em 0.9em;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+
+.status.inactive {
+  background: #f25f5c;
+  color: #fff;
+  padding: 0.3em 0.9em;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.activate-btn, .deactivate-btn {
+  /* Styles for activate/deactivate user buttons (padding, color, border radius, etc.) */
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 0.2em;
+  color: #fff;
+}
+
+.activate-btn {
+  /* Gradient background for activate button */
+  background: linear-gradient(90deg, #3ddad7 60%, #43aa8b 100%);
+}
+
+.deactivate-btn {
+  /* Gradient background for deactivate button */
+  background: linear-gradient(90deg, #fbb13c 60%, #f25f5c 100%);
+}
+
+.activate-btn:hover, .deactivate-btn:hover {
+  /* Hover effect for buttons */
+  filter: brightness(1.08);
+}
+
+/* Progress bars */
+.progress-bar {
+  /* Styles for progress bar containers (background, border radius, height) */
+  background: #e0e7ff;
+  border-radius: 8px;
+  height: 10px;
+  width: 100%;
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+
+.progress {
+  /* Styles for the progress indicator inside the bar (gradient, transition) */
+  background: linear-gradient(90deg, #3ddad7, #5f6caf);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s;
+}
+
+/* Section headings */
+h2 {
+  /* Section headings (color, font size, margin, etc.) */
+  color: #232946;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #232946;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+
+/* Section containers */
+.system-health, .chart-analytics, .storage-analytics, .activity-log, .users-section {
+  /* Styles for main dashboard sections/containers (background, border radius, shadow, padding) */
+  background: linear-gradient(90deg,#fff 0%, #788BFF 100%);
+  color: #232946;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.06);
+}
+
+.storage-analytics *,
+.activity-log * {
+  color: #232946;
+}
+
+/* Chart analytics grid */
+.chart-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-auto-rows: 1fr;
+  gap: 3rem; /* Increased gap for more spacing */
+}
+
+/* Add similar grid for system health */
+.system-health-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-auto-rows: 1fr;
+  gap: 3rem;
+}
+
+.chart-stat-card {
+  /* Styles for individual chart stat cards (background, border, shadow, etc.) */
+  flex: unset;
+  min-width: 0;
+  max-width: unset;
+  width: 85%; /* Reduce card width for more space between */
+  background: linear-gradient(120deg, #e0e7ff 0%, #f9fafb 100%);
+  color: #232946;
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  padding: 0.9rem 0.7rem; /* Reduce padding for a smaller card */
+  margin-bottom: 0; /* Remove margin-bottom, spacing is handled by grid gap */
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.system-health-card {
+  width: 85%;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f9fafb 100%);
+  color: #232946;
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  padding: 0.9rem 0.7rem;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.chart-stat-card h3 {
+  color: #4e67e1;
+  margin-bottom: 0.3em;
+}
+
+.chart-stat-card p {
+  color: #1f6d6c;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+} 
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+  .system-health, .chart-analytics, .storage-analytics, .activity-log, .users-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 0.5rem;
+  }
+  .system-health, .chart-analytics, .storage-analytics, .activity-log, .users-section {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}

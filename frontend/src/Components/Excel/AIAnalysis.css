@@ -1,0 +1,128 @@
+.ai-analysis-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  color: #232946;
+}
+
+.file-selection {
+  margin-bottom: 2rem;
+}
+
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.file-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  color: #232946;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  border: 1px solid #e0e7ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.13);
+}
+
+.file-card.selected {
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.column-selection {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 8px;
+  color: white;
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.column-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.generate-button {
+  background: linear-gradient(90deg, #3ddad7 60%, #43aa8b 100%);
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1rem;
+}
+
+.generate-button:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.generate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.insight-card {
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  padding: 1.5rem;
+  border-radius: 18px;
+  color: #232946;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  border: 1px solid #e0e7ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.13);
+}
+
+.insight-icon {
+  font-size: 1.5rem;
+}
+
+.insight-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #232946;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  font-size: 2rem;
+}
+
+.insight-recommendation {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

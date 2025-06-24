@@ -1,0 +1,106 @@
+.export-options {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  color: #232946;
+  padding: 1.5rem;
+}
+
+.export-format {
+  margin-bottom: 1rem;
+}
+
+.export-format select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--card-background);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.export-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.export-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.export-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.export-checkbox span {
+  color: var(--text-primary);
+}
+
+select {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--card-background);
+  color: var(--text-primary);
+}
+
+.export-button {
+  background: linear-gradient(90deg, #3ddad7 60%, #43aa8b 100%);
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.export-button:hover {
+  filter: brightness(1.08);
+}
+
+.export-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .export-options {
+  background: var(--card-background);
+}
+
+[data-theme="dark"] .export-settings {
+  background: var(--background-color);
+}
+
+[data-theme="dark"] .export-checkbox span {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] select {
+  background: var(--card-background);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .export-settings {
+    flex-direction: column;
+  }
+  
+  .export-checkbox {
+    width: 100%;
+  }
+}

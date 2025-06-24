@@ -1,0 +1,118 @@
+.upload-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f2f2f2 100%);
+  color: #232946;
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.10);
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+.upload-container h2 {
+  color: #232946;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better contrast */
+}
+
+.success-message {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #ecfdf5;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fef2f2;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+/* File Upload Styles */
+.file-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(41, 35, 35);
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+}
+
+.upload-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #3ddad7 60%, #43aa8b 100%);
+  color: #323232;
+  border-radius: 8px;
+  border: 2px solid #43aa8b;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.upload-button:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.upload-button:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Image Upload Animation */
+.upload-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.upload-illustration {
+  max-width: 200px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
